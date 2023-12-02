@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>today project</title>
+    <style>
+        .header{
+            background-color: aqua;
+            height: 600px;
+            width: 500px;
+            /* margin-left: 500px; */
+            margin-top: 100px;
+            /* margin-right: 500px; */
+            position: relative;
+        }
+        h1{
+            text-align: center;
+            position: relative;
+            background-color: black;
+            color: white;
+            padding: 50px;
+            
+        }
+        input{
+            width: 97%;
+            height: 50px;
+            text-align: center;
+            font-size: x-large;
+        }
+        p{
+            text-align: center;
+        }
+        button{
+            padding: 20px;
+            margin-top: 40px;
+            position: relative;
+            left: 140px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- header name -->
+        <h1 style="">calculator</h1>
+        <!-- input section -->
+        <input id="inp" type="text" placeholder="Enter the number">
+        <br><br>
+        <input id="inp1" type="text" placeholder="Enter the number">
+        <!-- button section -->
+        <button id="add" onclick="add()">+</button>
+        <button id="sub" onclick="sub()">-</button>
+        <button id="mul" onclick="mul()">*</button>
+        <button id="div" onclick="div()">/</button><br><br>
+
+        <p id="ans">answer</p>
+    </div>
+    <script>
+       
+
+       
+        function add(){
+            var num = document.getElementById('inp').value;
+            var num1 = document.getElementById('inp1').value;
+        
+            var total = parseInt(num)+parseInt(num1);
+            document.getElementById('ans').innerHTML="your answer is "+total;
+
+        }
+        function sub(){
+            var num = document.getElementById('inp').value;
+            var num1 = document.getElementById('inp1').value;
+        
+            var total = parseInt(num)-parseInt(num1);
+            document.getElementById('ans').innerHTML="your answer is "+total;
+
+        }
+        function mul(){
+            var num = document.getElementById('inp').value;
+            var num1 = document.getElementById('inp1').value;
+        
+            var total = parseInt(num)*parseInt(num1);
+            document.getElementById('ans').innerHTML="your answer is "+total;
+
+        }
+        function div(){
+            var num = document.getElementById('inp').value;
+            var num1 = document.getElementById('inp1').value;
+        
+            var total = parseInt(num)/parseInt(num1);
+            document.getElementById('ans').innerHTML="your answer is "+total;
+
+        }
+
+
+    </script>
+    
+
+</body>
+</html>
